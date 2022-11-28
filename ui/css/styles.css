@@ -1,0 +1,200 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgba(248, 128, 128, 0) !important;
+    /* make the body full height*/
+    height: 100vh;
+    /* set our custom font */
+    font-family: 'Poppins', sans-serif;
+    /* create a linear gradient*/
+    display: flex;
+    align-items: flex-end;
+    /* justify-content: space-between; */
+}
+
+#container {
+    visibility: hidden;
+    width: 500px;
+    height: 200px;
+    /* this will help us center it*/
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    /* margin: 0 auto; */
+    /* make it a grid container*/
+    display: grid;
+    /* with two columns of same width*/
+    /* grid-template-columns: 1fr 1fr;*/
+    grid-template-columns: 240px 240px 20px;
+    grid-template-rows: 50% 50%;
+}
+
+#cross {
+    visibility: hidden;
+    width: 5px;
+    height: 5px;
+    font-size: 20px;
+    grid-row: 1;
+    grid-column: 3;
+    z-index: 1000;
+}
+
+#header {
+    visibility: hidden;
+    grid-column: 1/2;
+    grid-row: 1;
+    background-color: #00709A;
+    width: 500px;
+    height: 100%;
+    border-radius: 10px 10px 0px 0px;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    font-size: 50px;
+    display: grid;
+    grid-template-columns: 15px 470px 15px;
+    grid-template-rows: 15px 70px 15px;
+    grid-template-areas: "icono . ." ". indicator ." ". . .";
+}
+
+#icon {
+    visibility: hidden;
+    width: 25px;
+    height: 25px;
+    font-size: 25px;
+    grid-area: icono;
+    z-index: 1000;
+    margin-left: 5px;
+}
+
+#indicator {
+    grid-area: indicator;
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    margin: auto;
+    opacity: .9;
+    border-radius: 5px;
+    font-size: 35px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+#indicator-image {
+    width: 45px;
+    height: 45px;
+    background-size: cover !important;
+}
+
+#footer {
+    visibility: hidden;
+    grid-column: 1/2;
+    grid-row: 2;
+    background-color: white;
+    width: 500px;
+    height: 100%;
+    border-radius: 0px 0px 10px 10px;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    font-size: 15px;
+    display: grid;
+    grid-template-columns: 15px 470px 15px;
+    grid-template-rows: 15px 70px 15px;
+    grid-template-areas: ". . ." ". line ." ". . .";
+}
+
+#line {
+    width: 100%;
+    grid-area: line;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.slider {
+    grid-area: slider;
+    -webkit-appearance: none;
+    width: 100%;
+    height: 30px;
+    background-color: white;
+    border: 2px solid black;
+    outline: none !important;
+    border-radius: 5px;
+    padding-right: 3px;
+    padding-left: 3px;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #00709A;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.slider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: #00709A;
+    cursor: pointer;
+}
+
+#text {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    height: 20px;
+}
+
+#catalog {
+    visibility: hidden;
+    background-color: white;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    width: 500px;
+    height: 200px;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 30px 440px 30px;
+    grid-template-rows: 15px 46px 46px 46px 15px;
+    gap: 10px 0px;
+    grid-template-areas: ". . ." ". group1 ." ". group2 ." ". group3 ." ". . .";
+}
+
+.flex-catalog {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.button-style {
+    width: 50px;
+    height: 50px;
+    background-size: cover !important;
+}
+
+#group1 {
+    grid-area: group1;
+}
+
+#group2 {
+    grid-area: group2;
+}
+
+#group3 {
+    grid-area: group3;
+}
